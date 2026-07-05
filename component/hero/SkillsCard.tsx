@@ -1,5 +1,4 @@
 import Card from "../ui/Card";
-import CardFooter from "../ui/CardFooter";
 
 const skills = [
   "React",
@@ -12,19 +11,19 @@ const skills = [
 
 export default function SkillsCard() {
   return (
-    <Card className="h-[220px] p-6 flex flex-col justify-between">
+    <Card className="min-h-[220px] p-6 flex flex-col justify-between">
 
       <div>
-        <p className="text-xs uppercase tracking-[3px] text-[#6B7280]">
+        <p className="text-[11px] uppercase tracking-[3px] text-[#6B7280]">
           Tech Stack
         </p>
 
-        <div className="flex flex-wrap gap-3 mt-5">
+        <div className="flex flex-wrap gap-2 lg:gap-3 mt-5">
 
           {skills.map((skill) => (
             <span
               key={skill}
-              className="px-4 py-2 rounded-full border border-[#343434] text-sm"
+              className="px-3 lg:px-4 py-2 rounded-full border border-[#343434] text-xs lg:text-sm whitespace-nowrap hover:border-[#8B5CF6] transition-all duration-300"
             >
               {skill}
             </span>

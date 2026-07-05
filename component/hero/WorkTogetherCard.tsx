@@ -1,20 +1,21 @@
 import Card from "../ui/Card";
-import CardFooter from "../ui/CardFooter";
 
 export default function WorkTogetherCard() {
   return (
-    <Card className="h-[170px] p-6 flex flex-col justify-between">
+    <Card className="min-h-[170px] p-6 lg:p-8 flex flex-col justify-between">
+
       <div>
-        <p className="text-xs uppercase tracking-[3px] text-[#6B7280]">
+        <p className="text-[11px] uppercase tracking-[3px] text-[#6B7280]">
           Contact
         </p>
 
-        <h2 className="text-[38px] font-bold mt-2 leading-tight">
+        <h2 className="mt-3 text-3xl sm:text-4xl lg:text-[38px] font-bold leading-tight">
           Let's Work
           <br />
           Together.
         </h2>
       </div>
+
     </Card>
   );
 }
