@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 interface CardFooterProps {
   title: string;
+  role: string;
 }
 
 export default function CardFooter({ title, role }: CardFooterProps) {
