@@ -2,10 +2,10 @@ import { ArrowRight } from "lucide-react";
 
 interface CardFooterProps {
   title: string;
-  role: string;
+  role?: string;
 }
 
-export default function CardFooter({ title, role }: CardFooterProps) {
+export default function CardFooter({ title, role = "Front End Developer" }: CardFooterProps) {
   return (
     <div className="flex items-center justify-between mt-6">
       <div className="block items-center">
