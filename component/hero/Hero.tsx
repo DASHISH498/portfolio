@@ -10,11 +10,11 @@ import WorkTogetherCard from "./WorkTogetherCard";
 
 export default function Hero() {
   return (
-    <section className="w-full max-w-7xl mx-auto mt-8 px-4 lg:px-0">
+    <section className="w-full max-w-[1500px] mx-auto mt-8 px-6 xl:px-0">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
         {/* Left */}
-        <div className="lg:col-span-3 flex flex-col gap-6">
+        <div className="lg:col-span-3 flex flex-col gap-5">
           <ProfileCard />
           <SkillsCard />
         </div>
@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
 
         {/* Right */}
-        <div className="lg:col-span-3 flex flex-col gap-6">
+        <div className="lg:col-span-3 flex flex-col gap-5">
 
           <MarqueeCard />
 

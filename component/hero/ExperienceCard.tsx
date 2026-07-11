@@ -2,7 +2,7 @@ import Card from "../ui/Card";
 
 export default function ExperienceCard() {
   return (
-    <Card className="min-h-[520px] p-6 lg:p-8 flex flex-col justify-between">
+    <Card className="min-h-[370px] p-6 lg:p-8 flex flex-col justify-between">
 
       <div>
         <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold">

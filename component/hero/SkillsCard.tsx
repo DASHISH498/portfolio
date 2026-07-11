@@ -1,17 +1,26 @@
 import Card from "../ui/Card";
 
 const skills = [
+  "HTML5",
+  "CSS3",
+  "SASS",
   "React",
-  "Next.js",
   "Angular",
+  "Angular UI",
+  "Material UI",
   "TypeScript",
   "Tailwind",
+  "Bootstrap",
   "JavaScript",
+  "Pixel Perfect",
+  "Adobe Photoshop",
+  "AdobeXD",
+  "Figma",
 ];
 
 export default function SkillsCard() {
   return (
-    <Card className="min-h-[220px] p-6 flex flex-col justify-between">
+    <Card className="min-h-[250px] p-6 lg:p-8 flex flex-col justify-between">
 
       <div>
         <p className="text-[11px] uppercase tracking-[3px] text-[#6B7280]">

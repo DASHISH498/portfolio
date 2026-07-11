@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <header className="w-full flex justify-center pt-5 lg:pt-7 px-4">
-      <nav className="w-full max-w-7xl bg-[#171717] border border-[#2B2B2B] rounded-[24px] px-5 lg:px-8 h-[78px] flex items-center justify-between relative">
+      <nav className="w-full max-w-[1500px] bg-[#171717] border border-[#2B2B2B] rounded-[24px] px-5 lg:px-8 h-[78px] flex items-center justify-between relative">
 
         {/* Logo */}
         <Link href="/">

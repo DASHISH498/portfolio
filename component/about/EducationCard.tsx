@@ -1,35 +1,52 @@
 import Card from "../ui/Card";
 
+const education = [
+  {
+    year: "2014 - 2017",
+    degree: "Bachelor of Science (B.Sc. Mathematics)",
+    institute: "Graduation",
+  },
+  {
+    year: "2013",
+    degree: "Senior Secondary (12th)",
+    institute: "Vivekananda Senior Secondary School, Degana Junction",
+  },
+  {
+    year: "2011",
+    degree: "Secondary School (10th)",
+    institute: "Sharda Bal Niketan Madhyamik Vidhyalay, Degana Junction",
+  },
+];
+
 export default function EducationCard() {
   return (
-    <Card className="min-h-[260px] p-6 lg:p-8">
-      <p className="text-[11px] uppercase tracking-[3px] text-[#6B7280]">
+    <Card className="h-full min-h-[300px] p-8 relative overflow-hidden">
+
+      {/* Decoration */}
+      <div className="absolute top-5 right-5 w-16 h-16 rounded-full border border-[#303030]" />
+
+      <h2 className="text-3xl font-bold mb-8">
         Education
-      </p>
+      </h2>
 
-      <div className="mt-6 lg:mt-8 space-y-6 lg:space-y-7">
+      <div className="space-y-8">
+        {education.map((item) => (
+          <div key={item.degree}>
+            <p className="text-sm text-[#71717A] mb-2">
+              {item.year}
+            </p>
 
-        <div>
-          <h3 className="text-lg lg:text-xl font-semibold leading-snug">
-            Bachelor of Computer Applications
-          </h3>
+            <h3 className="text-xl font-semibold text-white">
+              {item.degree}
+            </h3>
 
-          <p className="text-[#8B5CF6] mt-2 text-sm lg:text-base">
-            University • 2020 - 2023
-          </p>
-        </div>
-
-        <div>
-          <h3 className="text-lg lg:text-xl font-semibold leading-snug">
-            Higher Secondary
-          </h3>
-
-          <p className="text-[#8B5CF6] mt-2 text-sm lg:text-base">
-            Rajasthan Board
-          </p>
-        </div>
-
+            <p className="text-[#8B5CF6] mt-2">
+              {item.institute}
+            </p>
+          </div>
+        ))}
       </div>
+
     </Card>
   );
 }

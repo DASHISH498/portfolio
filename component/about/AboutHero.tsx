@@ -38,10 +38,9 @@ export default function AboutHero() {
           </h1>
 
           <p className="mt-6 lg:mt-8 text-[#A1A1AA] leading-7 lg:leading-8 text-base lg:text-lg max-w-3xl">
-            Passionate Frontend Developer with experience in React,
-            Next.js, Angular and TypeScript. I build scalable,
-            responsive and modern web applications with a focus on
-            performance and user experience.
+            Passionate Frontend Developer with experience in React, Next.js,
+            Angular and TypeScript. I build scalable, responsive and modern web
+            applications with a focus on performance and user experience.
           </p>
         </div>
 
@@ -52,37 +51,32 @@ export default function AboutHero() {
       </div>
 
       {/* Second Row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
-
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
         <div className="lg:col-span-4">
           <ExperienceCard />
         </div>
 
-        <div className="lg:col-span-3">
+        <div className="lg:col-span-4">
           <WhatIDoCard />
         </div>
 
-        <div className="lg:col-span-5 md:col-span-2">
+        <div className="lg:col-span-4 md:col-span-2">
           <StatsCard />
         </div>
-
       </div>
 
       {/* Third Row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
-
-        <div className="lg:col-span-4">
-          <SocialCard />
-        </div>
-
-        <div className="lg:col-span-5 md:col-span-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-6">
+        {/* Education */}
+        <div className="md:col-span-2 xl:col-span-8">
           <EducationCard />
         </div>
 
-        <div className="lg:col-span-3">
+        {/* Right Side */}
+        <div className="md:col-span-2 xl:col-span-4 flex flex-col gap-6">
+          <SocialCard />
           <ContactCard />
         </div>
-
       </div>
     </section>
   );

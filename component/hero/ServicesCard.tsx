@@ -17,7 +17,7 @@ const services = [
   },
   {
     icon: <FaLayerGroup size={26} />,
-    title: "Backend",
+    title: "HTM Developer",
   },
   {
     icon: <FaLaptopCode size={26} />,

@@ -2,7 +2,7 @@ import Card from "../ui/Card";
 
 export default function StatsCard() {
   return (
-    <Card className="min-h-[350px] p-6 lg:p-8">
+    <Card className="h-full min-h-[430px] p-6 lg:p-8">
 
       <div className="grid grid-cols-2 gap-8 lg:gap-10 h-full">
 

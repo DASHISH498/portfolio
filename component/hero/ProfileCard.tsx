@@ -58,7 +58,7 @@ export default function ProfileCard() {
         </button>
       </div>
 
-      <CardFooter title="Biography" />
+      <CardFooter title="Biography" role="Front End Developer"/>
     </Card>
   );
 }
