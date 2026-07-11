@@ -5,16 +5,18 @@ interface CardFooterProps {
   role?: string;
 }
 
-export default function CardFooter({ title, role = "Front End Developer" }: CardFooterProps) {
+export default function CardFooter({ title, role }: CardFooterProps) {
   return (
     <div className="flex items-center justify-between mt-6">
       <div className="block items-center">
         <span className="block text-[12px] font-semibold text-white">
           {title}
         </span>
-        <span className="block text-[21px] font-semibold text-white">
-          {role}
-        </span>
+        {role && (
+          <span className="text-[18px] text-[#FFFFFF] font-bold">
+            {role}
+          </span>
+        )}
       </div>
       
 
