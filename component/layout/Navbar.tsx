@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import { getImagePath } from "@/libs/imagePath";
 
 const menuItems = [
   { title: "Home", href: "/" },
@@ -24,7 +25,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/images/logo.png"
+            src={getImagePath("/images/logo.png")}
             alt="Logo"
             width={170}
             height={170}
