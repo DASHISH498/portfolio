@@ -3,6 +3,9 @@ import Image from "next/image";
 import FeaturedProjectCard from "./FeaturedProjectCard";
 import ProjectStatsCard from "./ProjectStatsCard";
 import ProjectGrid from "./ProjectGrid";
+import TechStackCard from "./TechStackCard";
+import ProjectMarquee from "./ProjectMarquee";
+import { getImagePath } from "@/libs/imagePath";
 
 export default function ProjectsHero() {
   return (
@@ -11,10 +14,8 @@ export default function ProjectsHero() {
       {/* Hero */}
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
 
-        {/* Left */}
         <div className="xl:col-span-8 bg-[#171717] border border-[#2B2B2B] rounded-[28px] p-6 md:p-8 lg:p-12 relative overflow-hidden">
 
-          {/* Decoration */}
           <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full border border-[#8B5CF6]/20"></div>
 
           <div className="absolute top-8 right-8 w-24 h-24 rounded-full border border-[#8B5CF6]/20"></div>
@@ -32,17 +33,14 @@ export default function ProjectsHero() {
           <p className="mt-6 max-w-3xl text-[#A1A1AA] text-base md:text-lg leading-7 md:leading-8">
             Explore a collection of real-world projects built with
             React, Next.js, Angular and modern frontend technologies.
-            Every project reflects my passion for clean code,
-            responsive design and great user experiences.
           </p>
 
         </div>
 
-        {/* Right */}
         <div className="xl:col-span-4 bg-[#171717] border border-[#2B2B2B] rounded-[28px] p-6 md:p-8 flex items-center justify-center">
 
           <Image
-            src="/images/profile.jpeg"
+            src={getImagePath("/images/profile.jpeg")}
             alt="Projects"
             width={220}
             height={220}
@@ -53,7 +51,7 @@ export default function ProjectsHero() {
 
       </div>
 
-      {/* Featured Project + Stats */}
+      {/* Featured + Stats */}
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
 
         <div className="xl:col-span-8">
@@ -66,8 +64,14 @@ export default function ProjectsHero() {
 
       </div>
 
-      {/* Projects Grid */}
+      {/* Project Grid */}
       <ProjectGrid />
+
+      {/* Tech Stack */}
+      <TechStackCard />
+
+      {/* Marquee */}
+      <ProjectMarquee />
 
     </section>
   );

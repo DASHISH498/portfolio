@@ -1,47 +1,49 @@
+import { getImagePath } from "@/libs/imagePath";
 import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
-    image: "/images/project-1.jpg",
-    title: "OkChiller",
+    image: getImagePath("/images/patient-portal.png"),
+    title: "Adit CRM",
     description:
-      "Responsive web application developed using React with reusable components and REST API integration.",
+      "Healthcare CRM platform with appointment scheduling, patient management, dashboards and real-time workflow features.",
     tech: ["React", "TypeScript", "REST API"],
   },
   {
-    image: "/images/project-2.jpg",
+    image: getImagePath("/images/project-2.jpg"),
     title: "Patient Portal",
     description:
-      "Healthcare portal with authentication, dashboard and responsive UI built using Angular.",
-    tech: ["Angular", "Bootstrap", "API"],
+      "Modern patient portal built with Angular featuring authentication, appointments and responsive user interface.",
+    tech: ["Angular", "Bootstrap", "REST API"],
   },
   {
-    image: "/images/project-3.jpg",
+    image: getImagePath("/images/project-3.jpg"),
     title: "Lauren Interiors",
     description:
-      "Modern interior design website focused on responsive layouts and premium user experience.",
-    tech: ["React", "CSS", "Responsive"],
+      "Responsive business website with elegant UI, reusable components and optimized frontend architecture.",
+    tech: ["React", "SCSS", "Responsive UI"],
   },
   {
-    image: "/images/project-4.jpg",
-    title: "Target Point Defence",
+    image: getImagePath("/images/project-4.jpg"),
+    title: "Portfolio Website",
     description:
-      "Enterprise web application with scalable frontend architecture and reusable components.",
-    tech: ["Angular", "TypeScript", "SCSS"],
+      "Personal portfolio developed using Next.js and Tailwind CSS with Bento-inspired design and smooth animations.",
+    tech: ["Next.js", "Tailwind CSS", "TypeScript"],
   },
 ];
 
 export default function ProjectGrid() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
       {projects.map((project) => (
-        <ProjectCard
-          key={project.title}
-          {...project}
+        <ProjectCard 
+            key={project.title}
+            image={project.image}
+            title={project.title}
+            description={project.description}
+            tech={project.tech}
         />
       ))}
-
     </section>
   );
 }

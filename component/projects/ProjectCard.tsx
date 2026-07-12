@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Card from "../ui/Card";
 import { ArrowUpRight } from "lucide-react";
-import { getImagePath } from "@/libs/imagePath";
 
 interface ProjectCardProps {
   image: string;
@@ -11,6 +10,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({
+  image,
   title,
   description,
   tech,
@@ -18,10 +18,10 @@ export default function ProjectCard({
   return (
     <Card className="overflow-hidden group">
 
-      <div className="relative h-[220px] overflow-hidden">
+      <div className="relative h-[400px] overflow-hidden">
 
         <Image
-          src={getImagePath("/images/project-preview.jpg")}
+          src={image}
           alt={title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
