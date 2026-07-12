@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImagePath } from "@/libs/imagePath";
 
 export default function AboutImage() {
   return (
@@ -7,7 +8,7 @@ export default function AboutImage() {
       <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] lg:w-[250px] lg:h-[250px] rounded-full overflow-hidden bg-[#8B5CF6]">
 
         <Image
-          src="/images/profile.jpeg"
+          src={getImagePath("/images/profile.jpeg")}
           alt="Profile"
           width={250}
           height={250}

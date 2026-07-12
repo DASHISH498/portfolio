@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Card from "../ui/Card";
 import CardFooter from "../ui/CardFooter";
+import { getImagePath } from "@/libs/imagePath";
 
 export default function ProfileCard() {
   return (
@@ -44,7 +45,7 @@ export default function ProfileCard() {
           {/* Image */}
           <div className="relative z-10 w-[130px] h-[130px] lg:w-[145px] lg:h-[145px] rounded-full overflow-hidden border-4 border-[#171717]">
             <Image
-              src="/images/profile.jpeg"
+              src={getImagePath("/images/profile.jpeg")}
               alt="Profile"
               width={145}
               height={145}
