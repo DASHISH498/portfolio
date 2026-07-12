@@ -8,6 +8,7 @@ import ExperienceWithCard from "./ExperienceWithCard";
 import WorkflowCard from "./WorkflowCard";
 import CurrentlyLearningCard from "./LearningCard";
 import TechMarquee from "./TechMarquee";
+import { getImagePath } from "@/libs/imagePath";
 
 export default function SkillsHero() {
   return (
@@ -43,7 +44,7 @@ export default function SkillsHero() {
         <div className="xl:col-span-4 bg-[#171717] border border-[#2B2B2B] rounded-[28px] p-8 flex items-center justify-center">
 
           <Image
-            src="/images/profile.jpeg"
+            src={getImagePath("/images/profile.jpeg")}
             alt="Skills"
             width={260}
             height={260}

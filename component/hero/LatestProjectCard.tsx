@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Card from "../ui/Card";
 import CardFooter from "../ui/CardFooter";
+import { getImagePath } from "@/libs/imagePath";
 
 export default function LatestProjectCard() {
   return (
@@ -22,7 +23,7 @@ export default function LatestProjectCard() {
       <div className="flex justify-center my-6">
         <div className="relative w-full h-[140px] rounded-xl overflow-hidden">
           <Image
-            src="/images/project-preview.jpg"
+            src={getImagePath("/images/project-preview.jpg")}
             alt="Latest Project"
             fill
             className="object-cover"
