@@ -21,7 +21,7 @@ export default function FeaturedProjectCard() {
         <div className="relative h-[260px] md:h-[350px] lg:h-full overflow-hidden">
 
           <Image
-            src={getImagePath("/images/project-preview.jpg")}
+            src={getImagePath("/images/portfolio.png")}
             alt="Featured Project"
             fill
             className="object-cover transition-transform duration-500 hover:scale-105"

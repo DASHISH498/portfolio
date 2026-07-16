@@ -11,7 +11,7 @@ import ContactCard from "./ContactCard";
 
 export default function AboutHero() {
   return (
-    <section className="space-y-6 px-4 lg:px-0">
+    <section className="space-y-6 lg:px-0">
       {/* Back Button */}
       <Link
         href="/"

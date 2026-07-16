@@ -4,31 +4,24 @@ import ProjectCard from "./ProjectCard";
 const projects = [
   {
     image: getImagePath("/images/patient-portal.png"),
-    title: "Adit CRM",
-    description:
-      "Healthcare CRM platform with appointment scheduling, patient management, dashboards and real-time workflow features.",
-    tech: ["React", "TypeScript", "REST API"],
-  },
-  {
-    image: getImagePath("/images/project-2.jpg"),
     title: "Patient Portal",
     description:
       "Modern patient portal built with Angular featuring authentication, appointments and responsive user interface.",
-    tech: ["Angular", "Bootstrap", "REST API"],
+    tech: ["Angular", "Bootstrap"],
   },
   {
-    image: getImagePath("/images/project-3.jpg"),
+    image: getImagePath("/images/lauren_interior.png"),
     title: "Lauren Interiors",
     description:
       "Responsive business website with elegant UI, reusable components and optimized frontend architecture.",
-    tech: ["React", "SCSS", "Responsive UI"],
+    tech: ["Shopify"],
   },
   {
-    image: getImagePath("/images/project-4.jpg"),
-    title: "Portfolio Website",
+    image: getImagePath("/images/portfolio.png"),
+    title: "Portfolio",
     description:
-      "Personal portfolio developed using Next.js and Tailwind CSS with Bento-inspired design and smooth animations.",
-    tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+      "Personal portfolio developed using Next.js and Tailwind CSS.",
+    tech: ["Next.js", "Tailwind CSS", "ReactJS", "TypeScript"],
   },
 ];
 
