@@ -37,7 +37,7 @@ const projects = [
     image: getImagePath("/images/targetpoint.png"),
     title: "Target Point Defence",
     description:
-      "Modern job portal with job search, company listings and responsive UI.",
+      "-",
     tech: ["React", "Tailwind CSS"],
     url: "https://targetpointdefence.com/",
   },
