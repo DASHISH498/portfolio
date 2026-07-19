@@ -33,6 +33,14 @@ const projects = [
     tech: ["React", "Tailwind CSS"],
     url: "https://dashish498.github.io/jobnest/",
   },
+  {
+    image: getImagePath("/images/targetpoint.png"),
+    title: "Target Point Defence",
+    description:
+      "Modern job portal with job search, company listings and responsive UI.",
+    tech: ["React", "Tailwind CSS"],
+    url: "https://targetpointdefence.com/",
+  },
 ];
 
 export default function ProjectGrid() {
