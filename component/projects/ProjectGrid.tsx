@@ -41,6 +41,14 @@ const projects = [
     tech: ["React", "Tailwind CSS"],
     url: "https://targetpointdefence.com/",
   },
+  {
+    image: getImagePath("/images/codereviewai.png"),
+    title: "CodeReview AI",
+    description:
+      "Compare your code with AI and Get The bug in your code and correct Code.",
+    tech: ["React", "Tailwind CSS"],
+    url: "https://code-review-ai-rho.vercel.app/",
+  },
 ];
 
 export default function ProjectGrid() {
