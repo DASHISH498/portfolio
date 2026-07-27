@@ -55,7 +55,7 @@ const projects = [
     description:
       "Premium finance dashboard built using React and TypeScript.",
     tech: ["React", "Tailwind CSS"],
-    url: "https://code-review-ai-rho.vercel.app/",
+    url: "https://dashish498.github.io/finance-flow/",
   },
 ];
 
