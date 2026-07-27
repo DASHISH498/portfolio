@@ -49,6 +49,14 @@ const projects = [
     tech: ["React", "Tailwind CSS"],
     url: "https://code-review-ai-rho.vercel.app/",
   },
+  {
+    image: getImagePath("/images/financeflow.png"),
+    title: "FinanceFlow",
+    description:
+      "Premium finance dashboard built using React and TypeScript.",
+    tech: ["React", "Tailwind CSS"],
+    url: "https://code-review-ai-rho.vercel.app/",
+  },
 ];
 
 export default function ProjectGrid() {
