@@ -2,11 +2,11 @@ import Card from "../ui/Card";
 
 const stats = [
   {
-    value: "2+",
+    value: "7+",
     label: "Years Experience",
   },
   {
-    value: "15+",
+    value: "5+",
     label: "Projects Delivered",
   },
   {

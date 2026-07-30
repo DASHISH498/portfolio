@@ -10,12 +10,12 @@ const contactInfo = [
   {
     icon: <Mail size={20} />,
     title: "Email",
-    value: "yourmail@example.com",
+    value: "designer.ashish@hotmail.com",
   },
   {
     icon: <Phone size={20} />,
     title: "Phone",
-    value: "+91 XXXXX XXXXX",
+    value: "+91-9079083101",
   },
   {
     icon: <MapPin size={20} />,

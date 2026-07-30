@@ -8,7 +8,7 @@ export default function StatsCard() {
 
         <div className="flex flex-col justify-center">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
-            02+
+            07+
           </h2>
 
           <p className="mt-3 lg:mt-4 text-xs lg:text-sm text-gray-500 uppercase tracking-wider">
@@ -18,7 +18,7 @@ export default function StatsCard() {
 
         <div className="flex flex-col justify-center">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
-            15+
+            5+
           </h2>
 
           <p className="mt-3 lg:mt-4 text-xs lg:text-sm text-gray-500 uppercase tracking-wider">

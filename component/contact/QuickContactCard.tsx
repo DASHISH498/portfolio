@@ -26,7 +26,7 @@ export default function QuickContactCard() {
       </div>
 
       <a
-        href="mailto:yourmail@example.com"
+        href="mailto:designer.ashish@hotmail.com"
         className="mt-8 inline-flex items-center justify-between rounded-2xl border border-[#8B5CF6] bg-[#8B5CF6]/10 px-5 py-4 transition-all duration-300 hover:bg-[#8B5CF6] group"
       >
 

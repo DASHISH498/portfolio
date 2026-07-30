@@ -12,17 +12,17 @@ export default function SocialCard() {
 
         <div className="flex flex-wrap gap-4 lg:gap-5 mt-8">
 
-          <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-[#2B2B2B] flex items-center justify-center hover:border-[#8B5CF6] transition-all duration-300 cursor-pointer">
+          <a href="https://github.com/DASHISH498"  target="_blank"  rel="noopener noreferrer" className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-[#2B2B2B] flex items-center justify-center hover:border-[#8B5CF6] transition-all duration-300 cursor-pointer">
             <FaGithub className="text-[20px] lg:text-[24px]" />
-          </div>
+          </a>
 
-          <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-[#2B2B2B] flex items-center justify-center hover:border-[#8B5CF6] transition-all duration-300 cursor-pointer">
+          <a href="https://www.linkedin.com/in/dashishsoni/"  target="_blank"  rel="noopener noreferrer" className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-[#2B2B2B] flex items-center justify-center hover:border-[#8B5CF6] transition-all duration-300 cursor-pointer">
             <FaLinkedinIn className="text-[18px] lg:text-[22px]" />
-          </div>
+          </a>
 
-          <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-[#2B2B2B] flex items-center justify-center hover:border-[#8B5CF6] transition-all duration-300 cursor-pointer">
+          {/* <a href="https://github.com/DASHISH498"  target="_blank"  rel="noopener noreferrer" className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-[#2B2B2B] flex items-center justify-center hover:border-[#8B5CF6] transition-all duration-300 cursor-pointer">
             <FaInstagram className="text-[18px] lg:text-[22px]" />
-          </div>
+          </a> */}
 
         </div>
       </div>
