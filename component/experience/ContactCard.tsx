@@ -1,5 +1,5 @@
 import Card from "../ui/Card";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Link } from "lucide-react";
 
 export default function ContactCard() {
   return (
@@ -18,12 +18,6 @@ export default function ContactCard() {
         </h2>
 
       </div>
-
-      <button className="w-14 h-14 rounded-full bg-[#8B5CF6] hover:bg-[#7C3AED] transition flex items-center justify-center">
-
-        <ArrowUpRight size={22} />
-
-      </button>
 
     </Card>
   );

@@ -20,12 +20,12 @@ export default function CardFooter({ title, role }: CardFooterProps) {
       </div>
       
 
-      <button className="w-12 h-12 rounded-full border border-[#3A3A3A] flex items-center justify-center hover:bg-[#8B5CF6] hover:border-[#8B5CF6] transition-all duration-300 group">
+      {/* <button className="w-12 h-12 rounded-full border border-[#3A3A3A] flex items-center justify-center hover:bg-[#8B5CF6] hover:border-[#8B5CF6] transition-all duration-300 group">
         <ArrowRight
           size={18}
           className="group-hover:translate-x-1 transition-transform duration-300"
         />
-      </button>
+      </button> */}
     </div>
   );
 }

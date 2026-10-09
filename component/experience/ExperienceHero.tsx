@@ -42,10 +42,7 @@ export default function ExperienceHero() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-base leading-8 text-[#A1A1AA] md:text-lg">
-            Frontend Developer with hands-on experience in building scalable
-            applications using React, Next.js, Angular, TypeScript and modern
-            frontend technologies. Passionate about clean architecture, reusable
-            components and responsive user interfaces.
+            With 6+ years of experience in frontend development, I specialize in building responsive, pixel-perfect and accessible user interfaces. My focus is on translating designs into high-quality web experiences using HTML, CSS, JavaScript and Angular, with hands-on React.js experience through personal projects.
           </p>
         </div>
 

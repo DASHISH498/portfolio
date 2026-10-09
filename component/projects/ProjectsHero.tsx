@@ -31,8 +31,7 @@ export default function ProjectsHero() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-[#A1A1AA] text-base md:text-lg leading-7 md:leading-8">
-            Explore a collection of real-world projects built with
-            React, Next.js, Angular and modern frontend technologies.
+            Explore my frontend projects showcasing responsive UI design, clean code and user-focused experiences built with React.js, Angular, HTML, CSS and modern frontend technologies.
           </p>
 
         </div>

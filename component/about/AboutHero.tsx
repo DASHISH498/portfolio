@@ -38,9 +38,7 @@ export default function AboutHero() {
           </h1>
 
           <p className="mt-6 lg:mt-8 text-[#A1A1AA] leading-7 lg:leading-8 text-base lg:text-lg max-w-3xl">
-            Passionate Frontend Developer with experience in React, Next.js,
-            Angular and TypeScript. I build scalable, responsive and modern web
-            applications with a focus on performance and user experience.
+            Frontend Developer with 6+ years of experience in building responsive, pixel-perfect and user-friendly web interfaces using HTML, CSS, JavaScript and Angular, with hands-on experience in React.js and modern frontend technologies.
           </p>
         </div>
 

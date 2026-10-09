@@ -21,7 +21,6 @@ export default function Navbar() {
   return (
     <header className="w-full flex justify-center pt-5 lg:pt-7 px-4">
       <nav className="w-full max-w-[1500px] bg-[#171717] border border-[#2B2B2B] rounded-[24px] px-5 lg:px-8 h-[78px] flex items-center justify-between relative">
-
         {/* Logo */}
         <Link href="/">
           <Image
@@ -49,13 +48,16 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <button className="h-12 px-7 rounded-full bg-[#8B5CF6] hover:bg-[#7C3AED] transition font-semibold">
+          <Link
+            href="/contact"
+            className="h-12 px-7 rounded-full bg-[#8B5CF6] hover:bg-[#7C3AED] transition font-semibold inline-flex items-center justify-center"
+          >
             Let's Talk
-          </button>
+          </Link>
 
-          <button className="w-12 h-12 rounded-full bg-[#8B5CF6] flex items-center justify-center">
+          {/* <button className="w-12 h-12 rounded-full bg-[#8B5CF6] flex items-center justify-center">
             <ArrowUpRight size={20} />
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -69,7 +71,6 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="absolute top-[88px] left-0 w-full bg-[#171717] border border-[#2B2B2B] rounded-[24px] p-6 lg:hidden z-50">
-
             <ul className="flex flex-col gap-6">
               {menuItems.map((item) => (
                 <li key={item.href}>
@@ -87,10 +88,8 @@ export default function Navbar() {
             <button className="w-full mt-8 h-12 rounded-full bg-[#8B5CF6] font-semibold hover:bg-[#7C3AED] transition">
               Let's Talk
             </button>
-
           </div>
         )}
-
       </nav>
     </header>
   );

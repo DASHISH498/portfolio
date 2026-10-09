@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Card from "../ui/Card";
 import { ArrowUpRight } from "lucide-react";
 
@@ -16,12 +17,12 @@ export default function ContactCard() {
             <br />
             Together
           </h2>
-          <button className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#8B5CF6] flex items-center justify-center hover:bg-[#7C3AED] transition-all duration-300">
-        <ArrowUpRight
-          size={20}
-          className="lg:w-[22px] lg:h-[22px]"
-        />
-      </button>
+          <Link href="/contact" className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#8B5CF6] flex items-center justify-center hover:bg-[#7C3AED] transition-all duration-300">
+          <ArrowUpRight
+            size={20}
+            className="lg:w-[22px] lg:h-[22px]"
+          />
+        </Link>
         </div>
       </div>
 

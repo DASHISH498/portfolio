@@ -34,9 +34,7 @@ export default function SkillsHero() {
           </h1>
 
           <p className="mt-8 max-w-3xl text-[#A1A1AA] text-lg leading-8">
-            Frontend Developer with hands-on experience in building responsive,
-            scalable and high-performance web applications using React,
-            Next.js, Angular, TypeScript and modern UI technologies.
+            Specialized in creating pixel-perfect, responsive user interfaces using modern CSS techniques, Flexbox, Grid, Tailwind CSS and Bootstrap. Experienced in translating design concepts into clean, accessible and maintainable frontend code.
           </p>
 
         </div>
