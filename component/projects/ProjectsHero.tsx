@@ -39,7 +39,7 @@ export default function ProjectsHero() {
         <div className="xl:col-span-4 bg-[#171717] border border-[#2B2B2B] rounded-[28px] p-6 md:p-8 flex items-center justify-center">
 
           <Image
-            src={getImagePath("/images/profile.jpeg")}
+            src={getImagePath("/images/avatar.png")}
             alt="Projects"
             width={220}
             height={220}

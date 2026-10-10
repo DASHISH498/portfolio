@@ -1,13 +1,10 @@
 import Card from "../ui/Card";
 
 const technologies = [
-  "REST APIs",
-  "JSON",
   "Git",
   "GitHub",
   "Angular",
   "React",
-  "Next.js",
   "TypeScript",
   "JavaScript",
   "Bootstrap",

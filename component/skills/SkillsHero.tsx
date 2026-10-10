@@ -42,7 +42,7 @@ export default function SkillsHero() {
         <div className="xl:col-span-4 bg-[#171717] border border-[#2B2B2B] rounded-[28px] p-8 flex items-center justify-center">
 
           <Image
-            src={getImagePath("/images/profile.jpeg")}
+            src={getImagePath("/images/avatar.png")}
             alt="Skills"
             width={260}
             height={260}

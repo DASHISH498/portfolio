@@ -49,7 +49,7 @@ export default function ExperienceHero() {
         {/* Right */}
         <div className="xl:col-span-4 rounded-[28px] border border-[#2B2B2B] bg-[#171717] p-6 md:p-8 flex items-center justify-center">
           <Image
-            src={getImagePath("/images/profile.jpeg")}
+            src={getImagePath("/images/avatar.png")}
             alt="Ashish Kumar Soni"
             width={260}
             height={260}
