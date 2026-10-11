@@ -95,9 +95,9 @@ export default function FrontendSkillsCard() {
                   {skill.name}
                 </h4>
 
-                <p className="text-xs text-[#71717A]">
+                {/* <p className="text-xs text-[#71717A]">
                   {skill.level}
-                </p>
+                </p> */}
               </div>
             </div>
 

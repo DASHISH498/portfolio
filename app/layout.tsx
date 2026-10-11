@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Ashish Kumar Soni",
+  title: "Ashish Kumar Soni | Frontend Developer (React, Angular) – Jaipur",
   description: "Portfolio",
 };
 
