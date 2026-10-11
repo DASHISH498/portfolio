@@ -3,19 +3,24 @@ import { ArrowDown } from "lucide-react";
 
 const experience = [
   {
-    year: "08/2021 – 08/2026",
+    year: "2021 / 2026",
     role: "Frontend Developer",
     company: "Aditadv Tech Pvt. Ltd.",
   },
   {
-    year: "06/2020 – 01/2021",
-    role: "Frontend Developer",
-    company: "Target Point Defence",
+    year: "2020 / 2021",
+    role: "Web Graphic Designer",
+    company: "Red Symbol Technologies",
   },
   {
-    year: "08/2019 – 01/2020",
+    year: "2019 / 2020",
     role: "Web Graphic Designer",
     company: "Vaibhav Global Limited",
+  },
+  {
+    year: "2018 / 2019",
+    role: "Web Designer (Internship)",
+    company: "Aunico India",
   },
 ];
 

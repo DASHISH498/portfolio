@@ -18,52 +18,52 @@ const skills = [
   {
     icon: <FaReact className="text-[#61DAFB]" size={28} />,
     name: "React",
-    level: "Expert",
+    // level: "Expert",
   },
   {
     icon: <SiNextdotjs className="text-white" size={26} />,
     name: "Next.js",
-    level: "Advanced",
+    // level: "Advanced",
   },
   {
     icon: <FaAngular className="text-[#DD0031]" size={28} />,
     name: "Angular",
-    level: "Advanced",
+    // level: "Advanced",
   },
   {
     icon: <SiTypescript className="text-[#3178C6]" size={26} />,
     name: "TypeScript",
-    level: "Advanced",
+    // level: "Advanced",
   },
   {
     icon: <SiJavascript className="text-[#F7DF1E]" size={26} />,
     name: "JavaScript",
-    level: "Expert",
+    // level: "Expert",
   },
   {
     icon: <FaHtml5 className="text-[#E34F26]" size={28} />,
     name: "HTML5",
-    level: "Expert",
+    // level: "Expert",
   },
   {
     icon: <FaCss3Alt className="text-[#1572B6]" size={28} />,
     name: "CSS3",
-    level: "Expert",
+    // level: "Expert",
   },
   {
     icon: <SiTailwindcss className="text-[#38BDF8]" size={26} />,
     name: "Tailwind CSS",
-    level: "Advanced",
+    // level: "Advanced",
   },
   {
     icon: <FaBootstrap className="text-[#7952B3]" size={26} />,
     name: "Bootstrap",
-    level: "Advanced",
+    // level: "Advanced",
   },
   {
     icon: <FaGitAlt className="text-[#F05032]" size={28} />,
     name: "Git",
-    level: "Advanced",
+    // level: "Advanced",
   },
 ];
 

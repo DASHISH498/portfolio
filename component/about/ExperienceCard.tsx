@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 
 const experience = [
   {
-    year: "2021 / Present",
+    year: "2021 / 2026",
     role: "Frontend Developer",
     company: "Aditadv Tech Pvt. Ltd.",
   },
@@ -18,8 +18,8 @@ const experience = [
   },
   {
     year: "2018 / 2019",
-    role: "Web Designer Intern",
-    company: "Web Genesis (Aunico India)",
+    role: "Web Designer (Internship)",
+    company: "Aunico India",
   },
 ];
 

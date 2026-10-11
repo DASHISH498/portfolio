@@ -2,7 +2,7 @@ import Card from "../ui/Card";
 
 const stats = [
   {
-    value: "7+",
+    value: "6+",
     label: "Years Experience",
   },
   {
