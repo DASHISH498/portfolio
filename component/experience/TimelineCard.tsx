@@ -9,7 +9,7 @@ const experience = [
   },
   {
     year: "2020 / 2021",
-    role: "Web Graphic Designer",
+    role: "Web Graphic Designer / Front-End Developer",
     company: "Red Symbol Technologies",
   },
   {
