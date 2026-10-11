@@ -21,10 +21,6 @@ const skills = [
     icon: <FaReact className="text-[#61DAFB]" size={28} />,
   },
   {
-    name: "Next.js",
-    icon: <SiNextdotjs size={26} />,
-  },
-  {
     name: "Angular",
     icon: <FaAngular className="text-[#DD0031]" size={28} />,
   },
@@ -47,14 +43,6 @@ const skills = [
   {
     name: "Git",
     icon: <FaGitAlt className="text-[#F1502F]" size={26} />,
-  },
-  {
-    name: "Bitbucket",
-    icon: <SiBitbucket className="text-[#0052CC]" size={24} />,
-  },
-  {
-    name: "Jira",
-    icon: <SiJira className="text-[#2684FF]" size={24} />,
   },
 ];
 

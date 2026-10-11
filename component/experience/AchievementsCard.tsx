@@ -6,7 +6,6 @@ import {
 const achievements = [
   "Developed responsive web applications.",
   "Built reusable UI component libraries.",
-  "Integrated REST APIs successfully.",
   "Worked in Agile development teams.",
   "Optimized application performance.",
   "Delivered multiple production projects.",

@@ -2,7 +2,6 @@ import Card from "../ui/Card";
 
 const techs = [
   "React",
-  "Next.js",
   "Angular",
   "TypeScript",
   "JavaScript",
@@ -11,7 +10,6 @@ const techs = [
   "Git",
   "GitHub",
   "Figma",
-  "REST API",
 ];
 
 export default function TechMarquee() {

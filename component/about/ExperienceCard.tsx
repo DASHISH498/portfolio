@@ -16,11 +16,6 @@ const experience = [
     role: "Web Graphic Designer",
     company: "Vaibhav Global Limited",
   },
-  {
-    year: "2018 / 2019",
-    role: "Web Designer (Internship)",
-    company: "Aunico India",
-  },
 ];
 
 export default function ExperienceCard() {

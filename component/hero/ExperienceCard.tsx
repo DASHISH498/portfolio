@@ -6,7 +6,7 @@ export default function ExperienceCard() {
 
       <div>
         <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
-          06
+          06+
         </h2>
 
         <p className="uppercase text-gray-500 text-xs lg:text-sm mt-2 tracking-wider">

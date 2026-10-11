@@ -2,10 +2,8 @@ import Card from "../ui/Card";
 
 const items = [
   "React",
-  "Next.js",
   "Angular",
   "TypeScript",
-  "REST API",
   "Responsive Design",
   "Tailwind CSS",
 ];

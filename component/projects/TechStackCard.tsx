@@ -20,10 +20,6 @@ const stack = [
     name: "React",
   },
   {
-    icon: <SiNextdotjs size={26} />,
-    name: "Next.js",
-  },
-  {
     icon: <FaAngular size={28} className="text-[#DD0031]" />,
     name: "Angular",
   },

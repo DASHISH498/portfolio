@@ -2,7 +2,7 @@ import Card from "../ui/Card";
 
 const stats = [
   {
-    value: "4+",
+    value: "5+",
     label: "Projects Completed",
   },
   {
