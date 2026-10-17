@@ -55,6 +55,13 @@ export default function Navbar() {
             Let's Talk
           </Link>
 
+          <Link
+            href="https://dashish498.github.io/nexus-portfolio/"
+            className="h-12 px-7 rounded-full bg-[#8B5CF6] hover:bg-[#7C3AED] transition font-semibold inline-flex items-center justify-center"
+          >
+            Portfolio V2
+          </Link>
+
           {/* <button className="w-12 h-12 rounded-full bg-[#8B5CF6] flex items-center justify-center">
             <ArrowUpRight size={20} />
           </button> */}
@@ -85,9 +92,9 @@ export default function Navbar() {
               ))}
             </ul>
 
-            <button className="w-full mt-8 h-12 rounded-full bg-[#8B5CF6] font-semibold hover:bg-[#7C3AED] transition">
+            {/* <button className="w-full mt-8 h-12 rounded-full bg-[#8B5CF6] font-semibold hover:bg-[#7C3AED] transition">
               Let's Talk
-            </button>
+            </button> */}
           </div>
         )}
       </nav>
