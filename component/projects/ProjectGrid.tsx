@@ -57,6 +57,14 @@ const projects = [
     tech: ["React", "Tailwind CSS"],
     url: "https://dashish498.github.io/finance-flow/",
   },
+  {
+    image: getImagePath("/images/foodiehub-portfolio.png"),
+    title: "FoodieHub",
+    description:
+      "A responsive recipe platform with recipe browsing, search, recipe details, Login/Signup and saved favorites.",
+    tech: ["React", "Vite", "Tailwind CSS", "SCSS"],
+    url: "https://dashish498.github.io/Foodiehub/",
+  },
 ];
 
 export default function ProjectGrid() {
