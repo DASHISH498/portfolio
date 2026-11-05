@@ -46,7 +46,7 @@ const projects = [
     title: "CodeReview AI",
     description:
       "Compare your code with AI and Get The bug in your code and correct Code.",
-    tech: ["React", "Tailwind CSS"],
+    tech: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "Google Gemini API", "Monaco Editor"],
     url: "https://code-review-ai-rho.vercel.app/",
   },
   {
