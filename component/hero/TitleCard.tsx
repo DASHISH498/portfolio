@@ -22,7 +22,7 @@ export default function TitleCard() {
         </div>
 
         <a
-          href={getImagePath("/resume.pdf")}
+          href={getImagePath("/Ashish_Kumar_Soni_UI_Frontend_Developer.pdf")}
           download="Ashish-Kumar-Soni-Resume.pdf"
           className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-[#8B5CF6] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#7C3AED]"
         >
