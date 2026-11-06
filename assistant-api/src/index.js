@@ -68,7 +68,7 @@ CONTACT
 - Email: designer.ashish@hotmail.com
 - LinkedIn: https://linkedin.com/in/dashishsoni
 - GitHub: https://github.com/DASHISH498
-- Portfolio: https://portfolio-ashish498.vercel.app
+- Portfolio: https://dashish498.github.io/portfolio/
 
 RESPONSE RULES
 - Use only facts in this profile. Never invent salary, notice period, current employment status, extra achievements, certifications, or experience.
@@ -80,7 +80,6 @@ RESPONSE RULES
 `;
 
 const DEFAULT_ALLOWED_ORIGINS = [
-  "https://portfolio-ashish498.vercel.app",
   "https://dashish498.github.io",
   "http://localhost:3000",
 ];
