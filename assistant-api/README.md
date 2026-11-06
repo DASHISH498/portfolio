@@ -1,59 +1,51 @@
-# Ask Ashish AI — deployment setup
+# Ask Ashish AI — Cloudflare Worker
 
-This is a separate Gemini-backed assistant for the portfolio. The portfolio itself remains a static Next.js export; the assistant API runs as a separate Vercel project rooted at this folder.
+This backend powers the Ask Me assistant in the portfolio. It is deployed as a Cloudflare Worker; no Vercel backend is used.
 
-## Files
-- `api/chat.js` — server-side Gemini endpoint.
-- `package.json` — isolated backend dependency on Google's official `@google/genai` SDK.
+## Worker files
+- `src/index.js` — Cloudflare Worker API and Gemini integration.
+- `wrangler.jsonc` — Worker configuration, model, allowed website origins, and required secret declaration.
+- `package.json` — Wrangler scripts.
 
-## 1. Deploy this API as a separate Vercel project
+## Deploy through Cloudflare Workers Builds
 
-1. In Vercel, create a new project from the `DASHISH498/portfolio` repository.
-2. Select branch `feature/ask-ashish-ai` for the initial preview (use the merged branch later for production).
-3. Set **Root Directory** to `assistant-api`.
-4. Use the Node.js runtime / Other preset. The API entry point is `api/chat.js`.
-5. Add the following server-side environment variables:
+1. Open Cloudflare Dashboard → Workers & Pages → Create → Connect to Git.
+2. Connect the `DASHISH498/portfolio` GitHub repository.
+3. Set the root directory to `assistant-api`.
+4. Set the production branch to `master` after this feature branch has been reviewed and merged.
+5. Use build command `npm install` and deploy command `npm run deploy`.
+6. Add the Worker secret `GEMINI_API_KEY` in Worker Settings → Variables and Secrets. Mark it as a Secret. Never add the key to GitHub, source code, or a `NEXT_PUBLIC_*` variable.
+7. Deploy. Cloudflare will provide a Worker URL such as `https://ask-ashish-ai.<your-workers-subdomain>.workers.dev`.
 
-| Name | Value |
-| --- | --- |
-| `GEMINI_API_KEY` | Your Google AI Studio API key (secret) |
-| `GEMINI_MODEL` | `gemini-3.8-flash` |
-| `ALLOWED_ORIGINS` | `https://dashish498.github.io,https://portfolio-ashish498.vercel.app,http://localhost:3000` |
+Cloudflare Workers Builds can automatically deploy on pushes to the connected branch. You can also deploy locally from this directory with `npm install`, `npx wrangler login`, `npx wrangler secret put GEMINI_API_KEY`, and `npm run deploy`.
 
-Add any custom portfolio domain to `ALLOWED_ORIGINS` as well. Do not add a trailing slash to an origin. Never use a `NEXT_PUBLIC_*` name for the Gemini key.
+## Connect the portfolio frontend
 
-6. Deploy and copy the API project's base URL, for example `https://ask-ashish-api.vercel.app`. The chat endpoint will be `https://ask-ashish-api.vercel.app/api/chat`.
+Set this build-time variable to the actual Worker URL (without a trailing slash):
 
-## 2. Configure the portfolio frontend
-
-The portfolio frontend reads this build-time variable:
-
-`NEXT_PUBLIC_ASK_ASHISH_API_URL=https://ask-ashish-api.vercel.app`
+`NEXT_PUBLIC_ASK_ASHISH_API_URL=https://ask-ashish-ai.<your-workers-subdomain>.workers.dev`
 
 Set it in:
-- The existing portfolio Vercel project, for its static export deployment.
-- GitHub repository Settings → Secrets and variables → Actions → Variables, with the exact name `NEXT_PUBLIC_ASK_ASHISH_API_URL`, so GitHub Pages builds embed the API URL.
+- GitHub repository Settings → Secrets and variables → Actions → Variables.
+- The portfolio build environment wherever the static portfolio is built.
+- A local `.env.local` in the portfolio root for local development (do not commit it).
 
-For local development, create `.env.local` in the portfolio root with the same variable. Do not commit `.env.local`.
+The GitHub Pages workflow already passes this variable into the Next.js static build. After setting it, rebuild and deploy the portfolio so the browser code knows the real Worker URL.
 
-After setting the variable, redeploy the portfolio so Next.js includes the URL in its static client bundle.
+The API endpoint is `/api/chat`; the health check is `/health`.
 
-## 3. Test
-
-Try:
+## Test questions
 - Tell me about yourself.
 - What is Ashish's Angular experience?
 - Does Ashish have professional React experience?
 - Tell me about FoodieHub.
-- What are Ashish's salary expectations? (The assistant should say the public profile does not specify.)
+- What are Ashish's salary expectations? (The assistant should say that the public profile does not specify.)
 - What is your favorite movie? (The assistant should decline unrelated questions.)
 
-## Privacy, security, and limits
-
-- Gemini is called only by the serverless API. The secret is never sent to the browser.
-- The API only accepts POST and preflight OPTIONS requests, validates the Origin header, limits question/history lengths, and applies a basic per-instance rate limit.
-- The in-memory rate limit is best-effort and is not a shared global quota. Add a persistent shared rate limiter before high-traffic public use.
-- The browser speech-recognition API varies by browser and may require microphone permission. Typed questions are always available.
-- Spoken answers use the visitor's browser text-to-speech engine. Voice output can be muted.
-- Chat history is held in page memory only and is not persisted by this application.
+## Security and behavior
+- Gemini is called only from the Worker. `GEMINI_API_KEY` is a Cloudflare secret and is never sent to the browser.
+- The Worker validates the browser Origin, accepts POST requests only at `/api/chat`, limits question/history length, and applies a per-isolate best-effort request limit.
+- Origin checks are browser isolation controls, not authentication; non-browser clients can spoof an Origin header. The in-memory rate limit is not a global quota system. Add Cloudflare rate limiting / Turnstile before high-traffic public use.
+- Voice input uses browser Speech Recognition when supported. Spoken replies use the visitor's browser Speech Synthesis. Microphone permission may be required.
+- Text conversation history is sent to Gemini for context but is not saved by this application.
 - Gemini usage may consume quota or incur charges depending on the Google account and plan.
