@@ -1,51 +1,64 @@
 # Ask Ashish AI — Cloudflare Worker
 
-This backend powers the Ask Me assistant in the portfolio. It is deployed as a Cloudflare Worker; no Vercel backend is used.
+This backend powers the floating Ask Me assistant in the portfolio. It runs on Cloudflare Workers and uses Google's Gemini API. There is no Vercel backend.
 
-## Worker files
+## Files
 - `src/index.js` — Cloudflare Worker API and Gemini integration.
-- `wrangler.jsonc` — Worker configuration, model, allowed website origins, and required secret declaration.
+- `wrangler.jsonc` — Worker name, Gemini model, allowed origins, and required secret declaration.
 - `package.json` — Wrangler scripts.
 
-## Deploy through Cloudflare Workers Builds
+## Automatic deployment
 
-1. Open Cloudflare Dashboard → Workers & Pages → Create → Connect to Git.
-2. Connect the `DASHISH498/portfolio` GitHub repository.
-3. Set the root directory to `assistant-api`.
-4. Set the production branch to `master` after this feature branch has been reviewed and merged.
-5. Use build command `npm install` and deploy command `npm run deploy`.
-6. Add the Worker secret `GEMINI_API_KEY` in Worker Settings → Variables and Secrets. Mark it as a Secret. Never add the key to GitHub, source code, or a `NEXT_PUBLIC_*` variable.
-7. Deploy. Cloudflare will provide a Worker URL such as `https://ask-ashish-ai.<your-workers-subdomain>.workers.dev`.
+The repository includes `.github/workflows/deploy-ask-ashish-worker.yml`. After this feature branch is merged into `master`, every change under `assistant-api/**` automatically deploys the Worker.
 
-Cloudflare Workers Builds can automatically deploy on pushes to the connected branch. You can also deploy locally from this directory with `npm install`, `npx wrangler login`, `npx wrangler secret put GEMINI_API_KEY`, and `npm run deploy`.
+Add these three GitHub Actions secrets under repository Settings → Secrets and variables → Actions → Repository secrets:
+
+| Secret name | Value |
+| --- | --- |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare API token with permission to edit Workers scripts |
+| `CLOUDFLARE_ACCOUNT_ID` | Your Cloudflare account ID |
+| `GEMINI_API_KEY` | Google AI Studio API key |
+
+The workflow installs Wrangler, pipes the Gemini key directly into `wrangler secret put`, then deploys the Worker. The key is never written into the repository or frontend bundle.
+
+Cloudflare will provide a URL similar to:
+
+`https://ask-ashish-ai.<your-workers-subdomain>.workers.dev`
+
+The Worker exposes:
+- `GET /health` — health check.
+- `POST /api/chat` — Gemini-backed chat endpoint.
 
 ## Connect the portfolio frontend
 
-Set this build-time variable to the actual Worker URL (without a trailing slash):
+Set the GitHub Actions repository variable (not a secret) under Settings → Secrets and variables → Actions → Variables:
 
 `NEXT_PUBLIC_ASK_ASHISH_API_URL=https://ask-ashish-ai.<your-workers-subdomain>.workers.dev`
 
-Set it in:
-- GitHub repository Settings → Secrets and variables → Actions → Variables.
-- The portfolio build environment wherever the static portfolio is built.
-- A local `.env.local` in the portfolio root for local development (do not commit it).
+Use the actual URL Cloudflare displays after the first successful Worker deployment. The GitHub Pages build workflow already passes this variable into the Next.js static build. Once configured, the next portfolio build will connect the Ask Me UI to the Worker.
 
-The GitHub Pages workflow already passes this variable into the Next.js static build. After setting it, rebuild and deploy the portfolio so the browser code knows the real Worker URL.
+## Model and allowed origins
 
-The API endpoint is `/api/chat`; the health check is `/health`.
+Configured in `wrangler.jsonc`:
+- Model: `gemini-3.8-flash`.
+- Allowed website origins: `https://dashish498.github.io` and `http://localhost:3000`.
+
+Add your own portfolio's exact origin to `ALLOWED_ORIGINS` if you use a different custom domain. Do not include URL paths or trailing slashes.
 
 ## Test questions
+
 - Tell me about yourself.
 - What is Ashish's Angular experience?
 - Does Ashish have professional React experience?
 - Tell me about FoodieHub.
-- What are Ashish's salary expectations? (The assistant should say that the public profile does not specify.)
+- What are Ashish's salary expectations? (The assistant should say the public profile does not specify.)
 - What is your favorite movie? (The assistant should decline unrelated questions.)
 
 ## Security and behavior
-- Gemini is called only from the Worker. `GEMINI_API_KEY` is a Cloudflare secret and is never sent to the browser.
-- The Worker validates the browser Origin, accepts POST requests only at `/api/chat`, limits question/history length, and applies a per-isolate best-effort request limit.
-- Origin checks are browser isolation controls, not authentication; non-browser clients can spoof an Origin header. The in-memory rate limit is not a global quota system. Add Cloudflare rate limiting / Turnstile before high-traffic public use.
-- Voice input uses browser Speech Recognition when supported. Spoken replies use the visitor's browser Speech Synthesis. Microphone permission may be required.
-- Text conversation history is sent to Gemini for context but is not saved by this application.
+
+- Gemini is called only from the Worker. `GEMINI_API_KEY` is a Cloudflare Worker secret.
+- The Worker validates the browser Origin, accepts POST requests at `/api/chat`, limits question/history length, and applies a per-isolate best-effort request limit.
+- Origin checks are browser isolation controls, not authentication; non-browser clients can spoof an Origin header. The in-memory rate limit is not a global quota system. Add Cloudflare rate limiting or Turnstile before high-traffic public use.
+- Voice input uses browser Speech Recognition when supported; spoken replies use browser Speech Synthesis. Microphone permission may be required.
+- Chat history is sent to Gemini for context but is not stored by this application.
 - Gemini usage may consume quota or incur charges depending on the Google account and plan.
