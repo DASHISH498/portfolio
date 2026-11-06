@@ -33,10 +33,14 @@ jobs:
         env:
           NEXT_PUBLIC_ASK_ASHISH_API_URL: ${{ vars.NEXT_PUBLIC_ASK_ASHISH_API_URL }}
 
-      - name: Install Gemini API dependencies
+      - name: Install Cloudflare Worker dependencies
         working-directory: assistant-api
         run: npm install
 
-      - name: Check Gemini API syntax
+      - name: Check Worker JavaScript syntax
         working-directory: assistant-api
-        run: node --check api/chat.js
+        run: npm run check
+
+      - name: Validate Wrangler configuration
+        working-directory: assistant-api
+        run: npx wrangler deploy --dry-run
