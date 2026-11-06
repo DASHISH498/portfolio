@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navbar from "@/component/layout/Navbar";
 import AnimatedBackground from "@/component/ui/AnimatedBackground";
+import AskAshishAssistant from "@/component/ai/AskAshishAssistant";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <AnimatedBackground />
         <Navbar />
         {children}
+        <AskAshishAssistant />
       </body>
     </html>
   );
