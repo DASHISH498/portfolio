@@ -27,7 +27,10 @@ jobs:
           cache: npm
 
       - run: npm ci
-      - run: npm run build
+      - name: Build Next.js
+        run: npm run build
+        env:
+          NEXT_PUBLIC_ASK_ASHISH_API_URL: ${{ vars.NEXT_PUBLIC_ASK_ASHISH_API_URL }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
