@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ask-ashish-ai",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-06",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "GEMINI_MODEL": "gemini-3.8-flash",
+    "ALLOWED_ORIGINS": "https://portfolio-ashish498.vercel.app,https://dashish498.github.io,http://localhost:3000"
+  },
+  "secrets": {
+    "required": ["GEMINI_API_KEY"]
+  }
+}
