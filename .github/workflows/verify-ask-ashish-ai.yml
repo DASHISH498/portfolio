@@ -32,3 +32,11 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_ASK_ASHISH_API_URL: ${{ vars.NEXT_PUBLIC_ASK_ASHISH_API_URL }}
+
+      - name: Install Gemini API dependencies
+        working-directory: assistant-api
+        run: npm install
+
+      - name: Check Gemini API syntax
+        working-directory: assistant-api
+        run: node --check api/chat.js
